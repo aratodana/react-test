@@ -1,4 +1,4 @@
-import Header from "./components/Header";
+import { Header } from "./components";
 import ProductPage from "./pages/ProductPage";
 
 function App() {
