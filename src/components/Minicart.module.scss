@@ -1,0 +1,10 @@
+@import "../styles/colors.scss";
+
+.minicart {
+  background-color: $color-ebony-clay;
+  min-height: 64px;
+  display: grid;
+  grid-template-columns: auto min-content;
+  align-items: center;
+  justify-content: center;
+}
