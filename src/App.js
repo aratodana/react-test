@@ -3,10 +3,10 @@ import ProductPage from "./pages/ProductPage";
 
 function App() {
   return (
-      <div>
-        <Header></Header>
-        <ProductPage></ProductPage>
-      </div>
+    <div>
+      <Header></Header>
+      <ProductPage></ProductPage>
+    </div>
   );
 }
 
