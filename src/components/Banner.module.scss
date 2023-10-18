@@ -2,13 +2,14 @@
 
 .banner {
   background-image: url("./../assets/bg.png");
-  background-size: contain;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100px;
+  background-position: 10% 60%;
 
-  @include md() {
+  @include lg() {
     height: 300px;
   }
 
