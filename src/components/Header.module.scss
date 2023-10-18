@@ -1,4 +1,4 @@
-@import "../styles/colors.scss";
+@import "../styles/index.scss";
 
 .header {
   background-color: $color-ebony-clay;
@@ -15,5 +15,6 @@
     display: flex;
     justify-content: center;
     align-content: center;
+    text-transform: uppercase;
   }
 }

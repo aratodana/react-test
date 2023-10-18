@@ -1,0 +1,22 @@
+@import "../styles/index.scss";
+
+.banner {
+  background-image: url("./../assets/bg.png");
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+
+  @include md() {
+    height: 300px;
+  }
+
+  &Title {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    color: $color-mirage;
+    width: 200px;
+  }
+}

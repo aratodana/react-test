@@ -1,5 +1,12 @@
 {
   "header": {
     "title": "Hello World"
+  },
+  "pages": {
+    "product_list": {
+      "banner": {
+        "title": "Fingertips Store"
+      }
+    }
   }
 }
