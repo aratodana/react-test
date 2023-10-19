@@ -1,8 +1,10 @@
 import style from "./ProductCard.module.scss";
 import { Button, Tooltip, ProductInformations } from "./index";
 import { IconTooltip } from "./icons/index";
-function productCard(props) {
-  return (
+import { useTranslation } from "react-i18next";
+function ProductCard (props) {
+    const { t } = useTranslation();
+    return (
     <div className={style.productCard}>
         <div className={style.productCardHeader}>
             <div className={style.productCardHeaderIcon}>
@@ -23,10 +25,10 @@ function productCard(props) {
           { props.product.price }
       </div>
         <Button>
-            Add to cart
+            { t('components.product_card.add_to_card') }
         </Button>
     </div>
   );
 }
 
-export default productCard;
+export default ProductCard;
