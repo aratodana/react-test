@@ -3,13 +3,15 @@ import { Button } from "./index.js";
 import { IconCart } from "./icons/index";
 import { useTranslation } from "react-i18next";
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 function Minicart() {
   // region init
   const { t } = useTranslation();
   // endregion init
 
   // region state
-  const itemCount = 2; // TODO: get item count from cart context
+  const cart = useSelector((state) => state.cart);
+  const itemCount = cart.length;
   // endregion state
 
   // region effect
@@ -34,10 +36,10 @@ function Minicart() {
     </button>
     { isOpen && <div className={style.minicartTooltip}>
       <h4 className={style.minicartTooltipHeader}>
-        You have 2 items in your cart.
+        { t('components.mini_cart.item_count', itemCount) }
       </h4>
       <div className={style.minicartTooltipContent}>
-        { t('components.mini_cart.item_count', 2) }
+        { JSON.stringify(cart) }
       </div>
       <div className={style.minicartTooltipFooter}>
         <Button>

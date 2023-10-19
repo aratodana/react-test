@@ -1,12 +1,14 @@
 import { Header } from "./components";
 import ProductPage from "./pages/ProductPage";
+import { Provider } from 'react-redux';
+import index from "./store";
 
 function App() {
   return (
-    <div>
-      <Header></Header>
-      <ProductPage></ProductPage>
-    </div>
+      <Provider store={index}>
+          <Header></Header>
+          <ProductPage></ProductPage>
+      </Provider>
   );
 }
 
