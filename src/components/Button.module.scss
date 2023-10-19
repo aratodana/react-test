@@ -1,0 +1,15 @@
+@import "../styles/index.scss";
+
+.button {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  background-color: $color-brand-primary;
+  color: $color-white;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  &:hover, &:focus {
+    background-color: lighten($color-brand-primary, 10%);
+  }
+}

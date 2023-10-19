@@ -1,4 +1,5 @@
 import style from "./ProductCard.module.scss";
+import { Button } from "./index";
 function productCard(props) {
   return (
     <div className={style.productCard}>
@@ -11,6 +12,9 @@ function productCard(props) {
       <div className={style.productCardPrice}>
           { props.product.price }
       </div>
+        <Button>
+            Add to cart
+        </Button>
     </div>
   );
 }

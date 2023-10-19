@@ -5,6 +5,9 @@
   border: 1px solid $color-wild-sand;
   border-radius: 10px;
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   &Image {
     width: 200px;
     height: 200px;
