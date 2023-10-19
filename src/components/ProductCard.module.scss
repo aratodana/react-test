@@ -5,4 +5,22 @@
   border: 1px solid $color-wild-sand;
   border-radius: 10px;
   padding: 16px;
+  &Image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    &Wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &Title {
+    color: $color-text-primary;
+    margin: 0;
+    font-weight: 400;
+  }
+  &Price {
+    background-color: blue;
+  }
 }
