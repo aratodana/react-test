@@ -1,0 +1,22 @@
+@import "../styles/index.scss";
+
+.spring {
+  &Wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &Content {
+    width: 100%;
+    @include md() {
+      width: $screen-md-min
+    }
+    @include lg() {
+      width: $screen-lg-min
+    }
+    @include xl() {
+      width: $screen-xl-min
+    }
+  }
+}
