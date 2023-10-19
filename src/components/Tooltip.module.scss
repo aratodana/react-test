@@ -1,0 +1,26 @@
+@import "../styles/index.scss";
+
+.tooltip {
+  position: relative;
+  &Trigger {
+    cursor: pointer;
+  }
+  &Content {
+    display: none;
+    position: absolute;
+    left: calc(100% + 10px);
+    top: 0;
+    padding: 16px;
+    border-radius: 5px;
+    color: $color-black;
+    background-color: $color-half-colonial-white;
+    z-index: 1;
+    &top {}
+
+  }
+  &:hover {
+    .tooltipContent {
+      display: block;
+    }
+  }
+}

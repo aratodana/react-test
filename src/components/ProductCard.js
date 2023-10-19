@@ -1,12 +1,16 @@
 import style from "./ProductCard.module.scss";
-import { Button } from "./index";
+import { Button, Tooltip } from "./index";
 import { IconTooltip } from "./icons/index";
 function productCard(props) {
   return (
     <div className={style.productCard}>
         <div className={style.productCardHeader}>
             <div className={style.productCardHeaderIcon}>
-                <IconTooltip className={style.productCardHeaderIcon}></IconTooltip>
+                <Tooltip
+                trigger={<IconTooltip className={style.productCardHeaderIcon}></IconTooltip>}
+                content={<div>Tooltip</div>}
+                >
+                </Tooltip>
             </div>
         </div>
         <div className={style.productCardImageWrapper}>

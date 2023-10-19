@@ -3,5 +3,6 @@ import Banner from './Banner';
 import ProductCard from "./ProductCard";
 import Spring from "./Spring";
 import Button from "./Button";
+import Tooltip from "./Tooltip";
 
-export { Header, Banner, ProductCard, Spring, Button };
+export { Header, Banner, ProductCard, Spring, Button, Tooltip };
