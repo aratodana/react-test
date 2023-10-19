@@ -1,0 +1,16 @@
+@import "../styles/index.scss";
+
+.productInformations {
+  min-width: 250px;
+  &Title {
+    margin: 0 0 10px;
+  }
+  &Text {
+    margin: 0 0 20px;
+  }
+  &Table {
+    margin: 0;
+    border-collapse: separate;
+    border-spacing: 10px 10px;
+  }
+}

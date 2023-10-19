@@ -8,5 +8,11 @@
         "title": "Fingertips Store"
       }
     }
+  },
+  "components": {
+    "productInformations": {
+      "description": "Description",
+      "features": "Key Features"
+    }
   }
 }

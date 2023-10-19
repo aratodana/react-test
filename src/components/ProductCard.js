@@ -1,5 +1,5 @@
 import style from "./ProductCard.module.scss";
-import { Button, Tooltip } from "./index";
+import { Button, Tooltip, ProductInformations } from "./index";
 import { IconTooltip } from "./icons/index";
 function productCard(props) {
   return (
@@ -8,7 +8,7 @@ function productCard(props) {
             <div className={style.productCardHeaderIcon}>
                 <Tooltip
                 trigger={<IconTooltip className={style.productCardHeaderIcon}></IconTooltip>}
-                content={<div>Tooltip</div>}
+                content={<ProductInformations product={props.product}></ProductInformations>}
                 >
                 </Tooltip>
             </div>
