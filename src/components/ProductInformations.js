@@ -14,16 +14,18 @@ const { t } = useTranslation();
               { t('components.product_informations.features') }
           </h4>
           <table className={style.productInformationsTable}>
-              { props.product.features.map(feature => {
-                  return <tr>
-                      <td>
-                          { feature.name }
-                      </td>
-                      <td>
-                        { feature.value }
-                      </td>
-                  </tr>
-              }) }
+              <tbody>
+                  { props.product.features.map(feature => {
+                      return <tr key={feature.name}>
+                          <td>
+                              { feature.name }
+                          </td>
+                          <td>
+                              { feature.value }
+                          </td>
+                      </tr>
+                  }) }
+              </tbody>
           </table>
 
       </div>
