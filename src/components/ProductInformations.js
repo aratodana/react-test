@@ -5,13 +5,13 @@ const { t } = useTranslation();
   return (
       <div className={style.productInformations}>
           <h4 className={style.productInformationsTitle}>
-              { t('components.productInformations.description') }
+              { t('components.product_informations.description') }
           </h4>
           <p className={style.productInformationsText}>
               { props.product.description }
           </p>
           <h4 className={style.productInformationsTitle}>
-              { t('components.productInformations.features') }
+              { t('components.product_informations.features') }
           </h4>
           <table className={style.productInformationsTable}>
               { props.product.features.map(feature => {
