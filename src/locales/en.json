@@ -13,6 +13,9 @@
     "productInformations": {
       "description": "Description",
       "features": "Key Features"
+    },
+    "miniCart": {
+      "title": "Shopping Cart"
     }
   }
 }

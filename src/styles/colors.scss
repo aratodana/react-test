@@ -11,5 +11,13 @@ $color-red: #e60000;
 $color-mirage: #201C3A;
 $color-half-colonial-white: #FDF1D7;
 
+// Transparents
+$color-white-20: rgba($color-white, 0.2);
+$color-white-40: rgba($color-white, 0.4);
+$color-white-60: rgba($color-white, 0.6);
+$color-white-80: rgba($color-white, 0.8);
+
+
+// Project colors
 $color-text-primary: $color-mirage;
 $color-brand-primary: $color-red;

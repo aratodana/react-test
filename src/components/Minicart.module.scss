@@ -1,10 +1,39 @@
 @import "../styles/index.scss";
 
 .minicart {
-  background-color: $color-ebony-clay;
-  min-height: 64px;
-  display: grid;
-  grid-template-columns: auto min-content;
-  align-items: center;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  gap: 16px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  height: 100%;
+  padding: 0 16px;
+  &:hover {
+    background-color: $color-white-20;
+  }
+  &Icon {
+    position: relative;
+    &Counter {
+      position: absolute;
+      bottom: -10px;
+      left: -10px;
+      background-color: $color-brand-primary;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+  &Text {
+    font-size: 14px;
+    white-space: nowrap;
+  }
 }
