@@ -45,4 +45,10 @@
   &Price {
     font-weight: 700;
   }
+  &Icon {
+      width: 20px;
+      height: 20px;
+      color: $color-white;
+      animation: opacity 600ms;
+  }
 }

@@ -1,17 +1,23 @@
 import style from "./ProductCard.module.scss";
 import { Button, Tooltip, ProductInformations } from "./index";
-import { IconTooltip } from "./icons/index";
+import { IconTooltip, IconCircleCheck } from "./icons/index";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../store/cartSlice';
+import { useState } from 'react';
 
 function ProductCard (props) {
     const { t } = useTranslation();
     const dispatch = useDispatch();
+    const [showAddedToCart, setShowAddedToCart] = useState(false);
 
     const handleAddToCart = event => {
         const product = props.product;
         dispatch(addToCart(product));
+        setShowAddedToCart(true);
+        setTimeout(() => {
+            setShowAddedToCart(false);
+        }, 2000);
     };
     return (
     <div className={style.productCard}>
@@ -34,7 +40,9 @@ function ProductCard (props) {
           { props.product.price }
       </div>
         <Button onClick={handleAddToCart}>
-            { t('components.product_card.add_to_card') }
+            { !showAddedToCart ? t('components.product_card.add_to_card') :             <div className={style.productCardIcon}>
+                <IconCircleCheck></IconCircleCheck>
+            </div> }
         </Button>
     </div>
   );
