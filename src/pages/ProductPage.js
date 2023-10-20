@@ -3,10 +3,6 @@ import { useTranslation } from "react-i18next";
 import style from "./ProductPage.module.scss";
 import products from "./productData"
 
-// Mocked productList data
-// TODO: use currencyFormatter to format price
-
-
 function ProductPage() {
   const { t } = useTranslation();
   return <>
