@@ -9,16 +9,16 @@ import products from "./productData"
 
 function ProductPage() {
   const { t } = useTranslation();
-  return <div>
+  return <>
     <Banner title={t('pages.product_list.banner.title')}></Banner>
     <Spring>
-      <ul className={style.productList}>
+      <section className={style.productList}>
         {products.map((product) => (
             <ProductCard  product={product} key={product.id}></ProductCard>
         ))}
-      </ul>
+      </section>
     </Spring>
-  </div>;
+  </>;
 }
 
 export default ProductPage;

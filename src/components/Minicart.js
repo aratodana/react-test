@@ -57,11 +57,11 @@ function Minicart() {
     </span>
     </button>
     { isOpen && <div className={style.minicartTooltip} id="minicartContent">
-      <h4 className={style.minicartTooltipHeader} tabIndex="0">
+      <h4 className={style.minicartTooltipHeader} >
         { t('components.mini_cart.item_count', { count: itemCount }) }
       </h4>
       <div className={style.minicartTooltipContent}>
-        <table className={style.minicartTooltipContentTable} tabIndex="0">
+        <table className={style.minicartTooltipContentTable} >
           <thead>
           <tr>
             <th className={style.minicartTooltipContentTableItems}>

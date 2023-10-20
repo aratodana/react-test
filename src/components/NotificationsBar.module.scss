@@ -12,6 +12,8 @@
     gap: 10px;
     &Noti {
       animation: slideY 200ms;
+      margin: 0;
+      list-style: none;
     }
   }
 }

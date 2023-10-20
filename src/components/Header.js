@@ -4,12 +4,12 @@ import { useTranslation } from "react-i18next";
 function Header() {
   const { t } = useTranslation();
   return (
-    <nav className={style.header}>
+    <header className={style.header}>
       <div className={style.headerText}>{t("header.title")}</div>
         <div className={style.headerMinicart}>
             <Minicart></Minicart>
         </div>
-    </nav>
+    </header>
   );
 }
 

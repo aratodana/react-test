@@ -7,13 +7,13 @@ function NotificationsBar() {
   return (
     <div className={style.notificationsBar}>
         <Spring>
-            <div className={style.notificationsBarList}>
+            <ul className={style.notificationsBarList}>
                 { showNotifications.map(currentNotification =>
-                    <div className={style.notificationsBarListNoti} key={currentNotification.text}>
+                    <li className={style.notificationsBarListNoti} key={currentNotification.text}>
                         <Notification notification={currentNotification}></Notification>
-                    </div>
+                    </li>
                 )}
-            </div>
+            </ul>
         </Spring>
     </div>
   );

@@ -27,17 +27,7 @@ function ProductCard (props) {
         }, 2000);
     };
     return (
-    <li className={style.productCard}>
-        <div className={style.productCardHeader}>
-            <div className={style.productCardHeaderIcon}>
-                <Tooltip
-                tabIndex="0"
-                trigger={<IconTooltip className={style.productCardHeaderIcon}></IconTooltip>}
-                content={<ProductInformations product={props.product}></ProductInformations>}
-                >
-                </Tooltip>
-            </div>
-        </div>
+    <article className={style.productCard}>
         <div className={style.productCardImageWrapper}>
             <img src={props.product.image} alt={props.product.title} className={style.productCardImage} />
         </div>
@@ -47,6 +37,16 @@ function ProductCard (props) {
       <div className={style.productCardPrice}>
           { price(props.product.price) }
       </div>
+        <div className={style.productCardHeader}>
+            <div className={style.productCardHeaderIcon}>
+                <Tooltip
+                    tabIndex="0"
+                    trigger={<IconTooltip className={style.productCardHeaderIcon}></IconTooltip>}
+                    content={<ProductInformations product={props.product}></ProductInformations>}
+                >
+                </Tooltip>
+            </div>
+        </div>
         <Button onClick={handleAddToCart} label={ t('components.product_card.add_to_cart_label', {itemName: props.product.title}) }>
             { !showAddedToCart ?
                 t('components.product_card.add_to_cart')
@@ -55,7 +55,7 @@ function ProductCard (props) {
                 <IconCircleCheck></IconCircleCheck>
                 </div> }
         </Button>
-    </li>
+    </article>
   );
 }
 
