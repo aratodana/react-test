@@ -48,6 +48,8 @@
     width: 300px;
     top: calc(100% + 30px);
     right: 0;
+    animation: slideY 200ms;
+
     &:after {
       content: "";
       position: absolute;

@@ -15,8 +15,7 @@
     color: $color-black;
     background-color: $color-half-colonial-white;
     z-index: 1;
-    &top {}
-
+    animation: slideX 200ms;
   }
   &:hover {
     .tooltipContent {

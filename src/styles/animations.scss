@@ -1,0 +1,8 @@
+@keyframes slideY {
+  from { opacity: 0; transform: translateY(-20px) }
+  to {  opacity: 1;}
+}
+@keyframes slideX {
+  from { opacity: 0; transform: translateX(-20px) }
+  to {  opacity: 1;}
+}
