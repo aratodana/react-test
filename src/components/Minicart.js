@@ -2,12 +2,13 @@ import style from "./Minicart.module.scss";
 import { Button } from "./index.js";
 import { IconCart } from "./icons/index";
 import { useTranslation } from "react-i18next";
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import price from "../util/price";
 function Minicart() {
   // region init
   const { t } = useTranslation();
+  const tooltipRef = useRef(null);
   // endregion init
 
   // region state
@@ -25,8 +26,24 @@ function Minicart() {
   const toggleTooltip = () => {
     setIsOpen(!isOpen && !!itemCount);
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (tooltipRef.current && !tooltipRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    // Eseményfigyelő eltávolítása a komponens megszűnéskor
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   // endregion effect
-  return <div className={style.minicart}>
+  return <div className={style.minicart} ref={tooltipRef}>
     <button onClick={toggleTooltip} className={style.minicartButton}>
       <div className={style.minicartButtonIcon}>
         { itemCount > 0 &&
