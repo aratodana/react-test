@@ -37,7 +37,7 @@ function Minicart() {
     </button>
     { isOpen && <div className={style.minicartTooltip}>
       <h4 className={style.minicartTooltipHeader}>
-        { t('components.mini_cart.item_count', itemCount) }
+        { t('components.mini_cart.item_count', { count: itemCount }) }
       </h4>
       <div className={style.minicartTooltipContent}>
         <table>
@@ -57,7 +57,7 @@ function Minicart() {
           <tbody>
           { cart.map(item => {
             return (
-                <tr>
+                <tr key={item.id}>
                   <td>
                     { item.title }
                   </td>
