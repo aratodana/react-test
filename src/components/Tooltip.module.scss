@@ -13,13 +13,23 @@
   }
   &Content {
     position: absolute;
-    left: calc(100% + 10px);
-    top: 0;
     padding: 16px;
     border-radius: 5px;
     color: $color-black;
     background-color: $color-half-colonial-white;
     z-index: 1;
     animation: slideX 200ms;
+    &Left {
+      right: calc(100% + 10px);
+    }
+    &Right {
+      left: calc(100% + 10px);
+    }
+    &Top {
+      bottom: 0;
+    }
+    &Bottom {
+      top: 0;
+    }
   }
 }
