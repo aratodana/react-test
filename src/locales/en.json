@@ -30,7 +30,8 @@
       }
     },
     "product_card": {
-      "add_to_card": "Add to cart"
+      "add_to_cart": "Add to cart",
+      "add_to_cart_label": "Add to cart: {{itemName}}"
     }
   }
 }

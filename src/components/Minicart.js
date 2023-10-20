@@ -44,7 +44,7 @@ function Minicart() {
 
   // endregion effect
   return <div className={style.minicart} ref={tooltipRef}>
-    <button onClick={toggleTooltip} className={style.minicartButton}>
+    <button onClick={toggleTooltip} className={style.minicartButton} aria-expanded={ isOpen.toString() } aria-controls="minicartContent">
       <div className={style.minicartButtonIcon}>
         { itemCount > 0 &&
             <div className={style.minicartButtonIconCounter}>
@@ -56,12 +56,12 @@ function Minicart() {
           { t('components.mini_cart.title') }
     </span>
     </button>
-    { isOpen && <div className={style.minicartTooltip}>
-      <h4 className={style.minicartTooltipHeader}>
+    { isOpen && <div className={style.minicartTooltip} id="minicartContent">
+      <h4 className={style.minicartTooltipHeader} tabIndex="0">
         { t('components.mini_cart.item_count', { count: itemCount }) }
       </h4>
       <div className={style.minicartTooltipContent}>
-        <table className={style.minicartTooltipContentTable}>
+        <table className={style.minicartTooltipContentTable} tabIndex="0">
           <thead>
           <tr>
             <th className={style.minicartTooltipContentTableItems}>

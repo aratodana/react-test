@@ -6,13 +6,13 @@
   border: none;
   background-color: $color-brand-primary;
   color: $color-white;
-  border-radius: 10px;
+  border-radius: 7px;
   font-weight: 700;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  &:hover, &:focus {
+  &:hover, &:active {
     background-color: lighten($color-brand-primary, 10%);
   }
 }

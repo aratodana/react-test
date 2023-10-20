@@ -6,7 +6,7 @@ function Button(props) {
     }
   }
   return (
-    <button className={style.button} onClick={handleButtonClick}>
+    <button className={style.button} onClick={handleButtonClick} aria-label={props.label || props.children}>
         { props.children }
     </button>
   );

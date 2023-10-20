@@ -4,9 +4,14 @@
   position: relative;
   &Trigger {
     cursor: pointer;
+    background-color: transparent;
+    color: currentColor;
+    border: none;
+    width: 32px;
+    height: 32px;
+    padding: 0;
   }
   &Content {
-    display: none;
     position: absolute;
     left: calc(100% + 10px);
     top: 0;
@@ -16,10 +21,5 @@
     background-color: $color-half-colonial-white;
     z-index: 1;
     animation: slideX 200ms;
-  }
-  &:hover {
-    .tooltipContent {
-      display: block;
-    }
   }
 }

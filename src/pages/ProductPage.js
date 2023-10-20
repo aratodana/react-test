@@ -12,11 +12,11 @@ function ProductPage() {
   return <div>
     <Banner title={t('pages.product_list.banner.title')}></Banner>
     <Spring>
-      <div className={style.productList}>
+      <ul className={style.productList}>
         {products.map((product) => (
             <ProductCard  product={product} key={product.id}></ProductCard>
         ))}
-      </div>
+      </ul>
     </Spring>
   </div>;
 }

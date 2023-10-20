@@ -24,10 +24,11 @@ function ProductCard (props) {
         }, 2000);
     };
     return (
-    <div className={style.productCard}>
+    <li className={style.productCard}>
         <div className={style.productCardHeader}>
             <div className={style.productCardHeaderIcon}>
                 <Tooltip
+                tabIndex="0"
                 trigger={<IconTooltip className={style.productCardHeaderIcon}></IconTooltip>}
                 content={<ProductInformations product={props.product}></ProductInformations>}
                 >
@@ -43,12 +44,15 @@ function ProductCard (props) {
       <div className={style.productCardPrice}>
           { price(props.product.price) }
       </div>
-        <Button onClick={handleAddToCart}>
-            { !showAddedToCart ? t('components.product_card.add_to_card') :             <div className={style.productCardIcon}>
+        <Button onClick={handleAddToCart} label={ t('components.product_card.add_to_cart_label', {itemName: props.product.title}) }>
+            { !showAddedToCart ?
+                t('components.product_card.add_to_cart')
+                :
+                <div className={style.productCardIcon}>
                 <IconCircleCheck></IconCircleCheck>
-            </div> }
+                </div> }
         </Button>
-    </div>
+    </li>
   );
 }
 
