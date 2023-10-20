@@ -6,9 +6,9 @@ function Header() {
   return (
     <header className={style.header}>
       <div className={style.headerText}>{t("header.title")}</div>
-        <div className={style.headerMinicart}>
-            <Minicart></Minicart>
-        </div>
+      <div className={style.headerMinicart}>
+        <Minicart></Minicart>
+      </div>
     </header>
   );
 }

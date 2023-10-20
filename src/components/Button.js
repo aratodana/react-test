@@ -4,10 +4,14 @@ function Button(props) {
     if (props.onClick) {
       props.onClick();
     }
-  }
+  };
   return (
-    <button className={style.button} onClick={handleButtonClick} aria-label={props.label || props.children}>
-        { props.children }
+    <button
+      className={style.button}
+      onClick={handleButtonClick}
+      aria-label={props.label || props.children}
+    >
+      {props.children}
     </button>
   );
 }
