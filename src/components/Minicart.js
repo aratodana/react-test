@@ -12,6 +12,7 @@ function Minicart() {
   // region state
   const cart = useSelector((state) => state.cart);
   const itemCount = cart.length;
+  const sumPrice = cart.reduce((sum, item) => sum + item.price, 0);
   // endregion state
 
   // region effect
@@ -39,7 +40,48 @@ function Minicart() {
         { t('components.mini_cart.item_count', itemCount) }
       </h4>
       <div className={style.minicartTooltipContent}>
-        { JSON.stringify(cart) }
+        <table>
+          <thead>
+          <tr>
+            <th>
+              { t('components.mini_cart.table.header.items') }
+            </th>
+            <th>
+              { t('components.mini_cart.table.header.unit') }
+            </th>
+            <th>
+              { t('components.mini_cart.table.header.price') }
+            </th>
+          </tr>
+          </thead>
+          <tbody>
+          { cart.map(item => {
+            return (
+                <tr>
+                  <td>
+                    { item.title }
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td>
+                    { item.price }
+                  </td>
+                </tr>)
+          })}
+          </tbody>
+          <tfoot>
+          <tr>
+            <td>
+              { t('components.mini_cart.table.footer.total') }
+            </td>
+            <td></td>
+            <td>
+              { sumPrice }
+            </td>
+          </tr>
+          </tfoot>
+        </table>
       </div>
       <div className={style.minicartTooltipFooter}>
         <Button>

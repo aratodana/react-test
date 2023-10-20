@@ -17,7 +17,17 @@
     "mini_cart": {
       "title": "Shopping Cart",
       "go_to_checkout": "Checkout",
-      "item_count": "You have {count} item in your cart"
+      "item_count": "You have {count} item in your cart",
+      "table": {
+        "header": {
+          "items": "Items",
+          "unit": "Unit",
+          "price": "Price"
+        },
+        "footer": {
+          "total": "Total order value"
+        }
+      }
     },
     "product_card": {
       "add_to_card": "Add to cart"
