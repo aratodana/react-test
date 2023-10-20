@@ -1,19 +1,30 @@
 @import "../styles/index.scss";
 
 .notificationsBar {
+  position: sticky;
   width: 100%;
-  position: absolute;
+  height: 0;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
   top: 0;
   z-index: 10;
-  padding-top: 10px;
   &List {
+    padding-top: 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    box-shadow: $color-black;
+    margin: 0;
     &Noti {
       animation: slideY 200ms;
       margin: 0;
       list-style: none;
+      width: 100vw;
+      @include md () {
+        width: min-content;
+        white-space: nowrap;
+      }
     }
   }
 }

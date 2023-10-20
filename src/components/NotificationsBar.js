@@ -6,15 +6,13 @@ function NotificationsBar() {
     const showNotifications = notificationList.slice(0, 3);
   return (
     <div className={style.notificationsBar}>
-        <Spring>
-            <ul className={style.notificationsBarList}>
-                { showNotifications.map(currentNotification =>
-                    <li className={style.notificationsBarListNoti} key={currentNotification.text}>
-                        <Notification notification={currentNotification}></Notification>
-                    </li>
-                )}
-            </ul>
-        </Spring>
+        <ul className={style.notificationsBarList}>
+            { showNotifications.map(currentNotification =>
+                <li className={style.notificationsBarListNoti} key={currentNotification.text}>
+                    <Notification notification={currentNotification}></Notification>
+                </li>
+            )}
+        </ul>
     </div>
   );
 }
