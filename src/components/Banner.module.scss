@@ -1,13 +1,13 @@
 @import "../styles/index.scss";
 
 .banner {
-  background-image: url("./../assets/bg.png");
+  background-image: linear-gradient(to bottom, $color-white-20, $color-white), url("./../assets/bg.png");
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100px;
-  background-position: 10% 60%;
+  background-position: 10% 90%;
 
   @include lg() {
     height: 300px;
