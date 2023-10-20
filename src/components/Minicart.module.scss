@@ -64,6 +64,32 @@
     }
     &Content {
       color: $color-black;
+      &Table {
+        margin: 0;
+        border-collapse: collapse;
+        width: 100%;
+        td, th {
+          padding: 10px;
+        }
+        &Items {
+          text-align: left;
+        }
+        &Unit {
+          text-align: right;
+        }
+        &Price {
+          text-align: right;
+        }
+        &Row {
+          color: $color-mountain-mist;
+        }
+        &Foot {
+          border-top: 3px solid $color-athens-gray;
+          margin-top: 16px;
+          margin-bottom: 16px;
+          font-weight: 700;
+        }
+      }
     }
     &Footer {
       border-top: 1px solid $color-athens-gray;

@@ -40,16 +40,16 @@ function Minicart() {
         { t('components.mini_cart.item_count', { count: itemCount }) }
       </h4>
       <div className={style.minicartTooltipContent}>
-        <table>
+        <table className={style.minicartTooltipContentTable}>
           <thead>
           <tr>
-            <th>
+            <th className={style.minicartTooltipContentTableItems}>
               { t('components.mini_cart.table.header.items') }
             </th>
-            <th>
+            <th className={style.minicartTooltipContentTableUnit}>
               { t('components.mini_cart.table.header.unit') }
             </th>
-            <th>
+            <th className={style.minicartTooltipContentTablePrice}>
               { t('components.mini_cart.table.header.price') }
             </th>
           </tr>
@@ -57,29 +57,29 @@ function Minicart() {
           <tbody>
           { cart.map(item => {
             return (
-                <tr key={item.id}>
-                  <td>
+                <tr key={item.id} className={style.minicartTooltipContentTableRow}>
+                  <td className={style.minicartTooltipContentTableItems}>
                     { item.title }
                   </td>
-                  <td>
+                  <td className={style.minicartTooltipContentTableUnit}>
                     1
                   </td>
-                  <td>
+                  <td className={style.minicartTooltipContentTablePrice}>
                     { item.price }
                   </td>
                 </tr>)
           })}
           </tbody>
-          <tfoot>
-          <tr>
-            <td>
-              { t('components.mini_cart.table.footer.total') }
-            </td>
-            <td></td>
-            <td>
-              { sumPrice }
-            </td>
-          </tr>
+          <tfoot className={style.minicartTooltipContentTableFoot}>
+            <tr>
+              <td className={style.minicartTooltipContentTableItems}>
+                { t('components.mini_cart.table.footer.total') }
+              </td>
+              <td></td>
+              <td className={style.minicartTooltipContentTablePrice}>
+                { sumPrice }
+              </td>
+            </tr>
           </tfoot>
         </table>
       </div>
