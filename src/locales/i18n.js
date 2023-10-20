@@ -7,8 +7,7 @@ i18n.use(initReactI18next).init({
       translation: require("./en.json"),
     },
   },
-  fallbackLng: "en",
-  debug: true,
+  fallbackLng: "en"
 });
 
 export default i18n;
