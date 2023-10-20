@@ -46,9 +46,9 @@
     font-weight: 700;
   }
   &Icon {
-      width: 20px;
-      height: 20px;
+      width: 16px;
+      height: 16px;
       color: $color-white;
-      animation: opacity 600ms;
+      animation: grow 600ms;
   }
 }

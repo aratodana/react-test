@@ -13,6 +13,9 @@ function ProductCard (props) {
     const [showAddedToCart, setShowAddedToCart] = useState(false);
 
     const handleAddToCart = event => {
+        if (showAddedToCart) {
+            return;
+        }
         const product = props.product;
         dispatch(addToCart(product));
         setShowAddedToCart(true);

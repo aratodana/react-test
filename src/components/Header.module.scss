@@ -17,4 +17,13 @@
     align-content: center;
     text-transform: uppercase;
   }
+  &Minicart {
+    z-index: 1;
+    height: 100%;
+    display: flex;justify-content: center;
+    align-items: center;
+    &:hover {
+      background-color: $color-white-20;
+    }
+  }
 }

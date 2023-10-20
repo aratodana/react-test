@@ -23,7 +23,7 @@ function Minicart() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleTooltip = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(!isOpen && !!itemCount);
   };
   // endregion effect
   return <div className={style.minicart}>
