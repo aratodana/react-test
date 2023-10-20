@@ -21,6 +21,7 @@
       margin: 0;
       list-style: none;
       width: 100vw;
+      box-shadow: 0px 6px 16px 0px $color-black-20;
       @include md () {
         width: min-content;
         white-space: nowrap;
