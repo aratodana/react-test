@@ -1,0 +1,12 @@
+@import "../styles/index.scss";
+
+.notification {
+  width: 100%;
+  min-height: 30px;
+  background-color: $color-peppermint;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  color: $color-woodland;
+  border-radius: 4px;
+}

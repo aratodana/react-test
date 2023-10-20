@@ -31,7 +31,8 @@
     },
     "product_card": {
       "add_to_cart": "Add to cart",
-      "add_to_cart_label": "Add to cart: {{itemName}}"
+      "add_to_cart_label": "Add to cart: {{itemName}}",
+      "add_to_cart_notification": "Added to cart: {{itemName}}"
     }
   }
 }

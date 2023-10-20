@@ -1,0 +1,17 @@
+@import "../styles/index.scss";
+
+.notificationsBar {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  padding-top: 10px;
+  &List {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    &Noti {
+      animation: slideY 200ms;
+    }
+  }
+}

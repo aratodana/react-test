@@ -4,6 +4,7 @@ import { IconTooltip, IconCircleCheck } from "./icons/index";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../store/cartSlice';
+import { addNotification, takeNotification } from '../store/notificationSlice';
 import { useState } from 'react';
 import price from '../util/price';
 
@@ -18,9 +19,11 @@ function ProductCard (props) {
         }
         const product = props.product;
         dispatch(addToCart(product));
+        dispatch(addNotification({ text: t('components.product_card.add_to_cart_notification', {itemName: product.title}) }));
         setShowAddedToCart(true);
         setTimeout(() => {
             setShowAddedToCart(false);
+            dispatch(takeNotification());
         }, 2000);
     };
     return (
