@@ -8,7 +8,10 @@ const products= [
   {
     id: 1,
     title: 'Poly Edge 550',
-    price: 30,
+    price: {
+      value: 30,
+      currency: 'GBP'
+    },
     image: require('../assets/products/item1.png'),
     description: "High-end phone suitable for front-of house and executive users",
     features: [
@@ -41,7 +44,10 @@ const products= [
   {
     id: 2,
     title: 'Poly Edge E320',
-    price: 30,
+    price: {
+      value: 30,
+      currency: 'GBP'
+    },
     image: require('../assets/products/item2.png'),
     description: "High-end phone suitable for front-of house and executive users",
     features: [
@@ -74,7 +80,10 @@ const products= [
   {
     id: 3,
     title: 'Poly Edge B30',
-    price: 210,
+    price: {
+      value: 210,
+      currency: 'GBP'
+    },
     image: require('../assets/products/item3.png'),
     description: "High-end phone suitable for front-of house and executive users",
     features: [
@@ -107,7 +116,10 @@ const products= [
   {
     id: 4,
     title: 'Nokia 3210',
-    price: 2010,
+    price: {
+      value: 2010,
+      currency: 'GBP'
+    },
     image: require('../assets/products/item4.png'),
     description: "High-end phone suitable for front-of house and executive users",
     features: [
@@ -140,7 +152,10 @@ const products= [
   {
     id: 5,
     title: 'Blackwire 52xx',
-    price: 29,
+    price: {
+      value: 29,
+    currency: 'GBP'
+    },
     image: require('../assets/products/item5.png'),
     description: "High-end phone suitable for front-of house and executive users",
     features: [
@@ -173,7 +188,10 @@ const products= [
   {
     id: 6,
     title: 'Voyager 43xx',
-    price: 29,
+    price: {
+      value: 29,
+      currency: 'GBP'
+    },
     image: require('../assets/products/item6.png'),
     description: "High-end phone suitable for front-of house and executive users",
     features: [
@@ -206,7 +224,10 @@ const products= [
   {
     id: 7,
     title: 'Savi 72xx',
-    price: 29,
+    price: {
+      value: 29,
+      currency: 'GBP'
+    },
     image: require('../assets/products/item7.png'),
     description: "High-end phone suitable for front-of house and executive users",
     features: [
@@ -239,7 +260,10 @@ const products= [
   {
     id: 8,
     title: 'Voyager Free 60',
-    price: 29,
+    price: {
+      value: 29,
+      currency: 'GBP'
+    },
     image: require('../assets/products/item8.png'),
     description: "High-end phone suitable for front-of house and executive users",
     features: [

@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../store/cartSlice';
 import { useState } from 'react';
+import price from '../util/price';
 
 function ProductCard (props) {
     const { t } = useTranslation();
@@ -37,7 +38,7 @@ function ProductCard (props) {
         {props.product.title}
       </h3>
       <div className={style.productCardPrice}>
-          { props.product.price }
+          { price(props.product.price) }
       </div>
         <Button onClick={handleAddToCart}>
             { !showAddedToCart ? t('components.product_card.add_to_card') :             <div className={style.productCardIcon}>

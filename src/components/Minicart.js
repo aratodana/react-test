@@ -4,6 +4,7 @@ import { IconCart } from "./icons/index";
 import { useTranslation } from "react-i18next";
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+import price from "../util/price";
 function Minicart() {
   // region init
   const { t } = useTranslation();
@@ -12,7 +13,10 @@ function Minicart() {
   // region state
   const cart = useSelector((state) => state.cart);
   const itemCount = cart.length;
-  const sumPrice = cart.reduce((sum, item) => sum + item.price, 0);
+  const sumPrice = {
+    value: cart.reduce((sum, item) => sum + item.price.value, 0),
+    currency: cart[0] ? cart[0].price.currency : 'GBP'
+  };
   // endregion state
 
   // region effect
@@ -65,7 +69,7 @@ function Minicart() {
                     1
                   </td>
                   <td className={style.minicartTooltipContentTablePrice}>
-                    { item.price }
+                    { price(item.price) }
                   </td>
                 </tr>)
           })}
@@ -77,7 +81,7 @@ function Minicart() {
               </td>
               <td></td>
               <td className={style.minicartTooltipContentTablePrice}>
-                { sumPrice }
+                { price(sumPrice) }
               </td>
             </tr>
           </tfoot>
