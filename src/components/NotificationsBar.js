@@ -1,5 +1,5 @@
 import style from "./NotificationsBar.module.scss";
-import { Spring, Notification } from "./index";
+import { Notification } from "./index";
 import { useSelector } from "react-redux";
 function NotificationsBar() {
     const notificationList = useSelector((state) => state.notification);
