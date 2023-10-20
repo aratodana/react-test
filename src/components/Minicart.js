@@ -12,7 +12,7 @@ function Minicart() {
 
   // region state
   const cart = useSelector((state) => state.cart);
-  const itemCount = cart.length;
+  const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
   const sumPrice = {
     value: cart.reduce((sum, item) => sum + item.price.value, 0),
     currency: cart[0] ? cart[0].price.currency : 'GBP'
@@ -66,7 +66,7 @@ function Minicart() {
                     { item.title }
                   </td>
                   <td className={style.minicartTooltipContentTableUnit}>
-                    1
+                    { item.quantity}
                   </td>
                   <td className={style.minicartTooltipContentTablePrice}>
                     { price(item.price) }
